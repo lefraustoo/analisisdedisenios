@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{rerunfilecheck}
+\geometry{margin=1in}
+
+\title{Estudio de Viabilidad y Análisis de Requerimientos para el Sistema de Gestión de Maquinaria en Taller Mecánico Universitario}
+\author{lefraustoo}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+% Introducción
+\section{Introducción}
+Este documento presenta el estudio de viabilidad y el análisis de requerimientos para el desarrollo de un sistema de gestión de maquinaria en un taller mecánico universitario. El propósito es optimizar el uso y la reserva de equipo, mejorando la eficiencia y disponibilidad de las máquinas para los estudiantes.
+
+\section{Estudio de Viabilidad}
+
+\subsection{1. Alcance del Sistema}
+Este sistema permitirá gestionar el uso de diversas máquinas en el taller, proporcionando un mecanismo de reserva, control de disponibilidad y mantenimiento. Además, facilitará la asignación de máquinas basadas en la prioridad de proyectos de los estudiantes.
+
+\subsection{2. Situación Actual}
+En la situación actual, la reserva de máquinas es manual, lo que genera conflictos y tiempos muertos. La falta de un sistema de gestión reduce la eficiencia y la disponibilidad de las máquinas.
+
+\subsection{3. Definición de Requisitos del Sistema}
+\begin{itemize}
+    \item Gestión de reservas para estudiantes.
+    \item Control de estado de las máquinas (disponible, en uso, en mantenimiento).
+    \item Reporte de uso y estadísticas.
+    \item Asignación priorizada de máquinas.
+\end{itemize}
+
+\subsection{4. Alternativas de Solución}
+\begin{itemize}
+    \item Desarrollo de una aplicación de escritorio en C++.
+    \item Implementación de un sistema web.
+    \item Uso de una aplicación móvil para reservas remotas.
+\end{itemize}
+
+\subsection{5. Valoración de Alternativas}
+Cada alternativa será evaluada en función de su facilidad de uso, tiempo de desarrollo y costo. La opción seleccionada deberá ser adaptable y capaz de cubrir las necesidades del taller.
+
+\subsection{6. Selección de la Solución}
+La solución seleccionada es el desarrollo de una aplicación de escritorio en C++, debido a su facilidad de integración en el taller y al cumplimiento de todos los requisitos funcionales.
+
+\newpage
+\section{Informe de Viabilidad}
+Se presenta un resumen de las etapas anteriores para justificar la viabilidad del sistema propuesto en términos técnicos, económicos y operativos.
+
+% Análisis de Requerimientos
+\section{Obtención y Análisis de Requerimientos}
+
+\subsection{1. Descubrimiento de Requerimientos}
+Se han identificado los siguientes requerimientos, tanto funcionales como no funcionales:
+\begin{itemize}
+    \item Requerimientos funcionales: reserva de máquinas, control de estados.
+    \item Requerimientos no funcionales: seguridad en el acceso, interfaz intuitiva.
+\end{itemize}
+
+\subsection{2. Clasificación y Organización de Requerimientos}
+Los requerimientos se organizan en categorías:
+\begin{itemize}
+    \item \textbf{Gestión de Reservas}: permite a los estudiantes reservar máquinas.
+    \item \textbf{Gestión de Mantenimiento}: permite bloquear máquinas para mantenimiento.
+\end{itemize}
+
+\subsection{3. Ordenación de Prioridades y Negociación}
+La gestión de reservas y el control de estados son los requerimientos de mayor prioridad. Los reportes de uso y estadísticas son secundarios y podrán añadirse en versiones futuras.
+
+\subsection{4. Documentación de Requerimientos}
+\begin{itemize}
+    \item \textbf{Requerimiento 1}: El sistema debe permitir la reserva de máquinas.
+    \item \textbf{Requerimiento 2}: El sistema debe permitir bloquear máquinas para mantenimiento programado.
+\end{itemize}
+
+% Conclusión
+\section{Conclusión}
+En conclusión, el estudio de viabilidad respalda el desarrollo de un sistema de gestión de maquinaria en C++ para el taller universitario. El análisis de requerimientos permite establecer una base sólida para el desarrollo del sistema y asegura que cumple con las necesidades del taller.
+
+\end{document}

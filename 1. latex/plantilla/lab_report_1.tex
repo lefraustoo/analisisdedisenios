@@ -1,0 +1,271 @@
+%----------------------------------------------------------------------------------------
+%	Inicio de documento y paquetes
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[version=3]{mhchem} % Paquete para ecuaciones qu'imicas
+\usepackage{siunitx} % Escritura de unidades en sistema internacional
+\usepackage{graphicx} % Para la inclusi'on de im'agenes 
+\usepackage{amsfonts}                       %% paquete para escribir en modo ecuación.
+\usepackage{amsmath,amsthm,amssymb,amsbsy}  %% paquetes para los símbolos, letras, etc. de matem'aticas
+\usepackage{mathptmx} 
+\usepackage[spanish, es-tabla]{babel}  				%% paquete para incluir el diccionario en espanhol e instrucci'on para que las tablas escriba como "tabla" y no como "cuadro".
+\usepackage[cmyk]{xcolor} 											% Para incluir colores en el documento  
+\usepackage{rotating} % paquete para rotar
+\usepackage[cmyk]{xcolor} 											% Para incluir colores en el documento  
+
+
+\usepackage{titlesec}  			%% paquete para personalizar secciones y subsecciones
+\usepackage[title,titletoc,toc]{appendix}
+\usepackage[full]{textcomp}           %% paquete para escribir texto de cómputo
+\usepackage{listings}
+\usepackage{float}
+\usepackage{geometry}  % paquete para personalizar los m'argenes del documento
+
+\usepackage{titling}
+
+
+%\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+% M'argenes para el reporte
+\geometry{tmargin=2cm, lmargin=2.5cm, rmargin=2.5cm,bmargin=2cm}
+
+
+% Se declaran los tipos de gr'aficos que se pueden incorporar en el documento
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
+
+%% ruta "relativa" para la carpeta que contiene imágenes respecto a la carpeta actual (donde se tiene guardado el .tex a compilar)
+\graphicspath{ {Figuras/} }  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%							Formato para Secciones, Subsecciones y Apéndice
+
+
+%%  Secciones
+\titleformat{\section}[runin]
+{\Large\normalfont\bfseries}
+{\S\ \thesection.}{.5em}{}[.]
+\titlespacing{\section}
+{\parindent}{1.5ex plus .1ex minus .2ex}{10pt}
+
+%% Subsecciones
+\titleformat{\subsection}[runin]
+{\normalfont\bfseries}
+{\thesubsection.}{.5em}{}[.---]
+\titlespacing{\subsection}
+{\parindent}{1.5ex plus .1ex minus .2ex} {5pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+%%											Quitar sangrias
+
+\setlength{\parindent}{0pt} % quita las sangrias
+
+%%-----------------------------------------------------------------
+%% Programa en Matlab
+
+%\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+%	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=matlab,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+%----------------------------------------------------------------------------------------
+%	Inicio de documento
+%----------------------------------------------------------------------------------------
+
+\pretitle{%
+  \begin{center}
+%  \LARGE
+\includegraphics[width=6cm,height=2cm]{IPNlogo.png}\\[\bigskipamount]
+\begin{minipage}[c]{1.5cm}\centering
+ {\includegraphics[scale=0.095]{IPNlogo.png}}
+ \end{minipage}
+ \begin{minipage}[c]{13cm}
+ \centering { \large{\textbf{INSTITUTO POLIT\'ECNICO  NACIONAL}\\
+  Unidad Profesional Interdisciplinaria  \\
+ en Ingenier\'ia y Tecnolog\'ias Avanzadas \\
+ }}
+ \end{minipage}
+  \begin{minipage}[c]{1.5cm}\centering
+ {\includegraphics[scale=0.25]{upiita-logo.png}}
+ \end{minipage}
+%\noindent\makebox[\linewidth]{\rule{12cm}{0.4pt}}
+}
+\posttitle{\end{center}}
+
+\title{\textbf{Actividad I.1}\\ Identificaci\'on de problemas \\ Individual} 
+
+%
+\author{Author 1\\
+    Author 2\\
+    Author 3} 
+
+%\date{\today} 
+
+\begin{document}
+
+% \maketitle 
+ 
+\begin{center}
+\begin{tabular}{l r}
+%Fecha de realizaci\'on: & 6 de septiembre de 2018 \\ 
+Alumnos: & Alumno 1 \\
+& Alumno 2 \\
+\\
+Profesor: & Dr. Diego A. Flores Hern\'andez 
+\end{tabular}
+\end{center}
+
+
+ \begin{abstract}
+Este es un resumen. 
+ \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	Secci'on 1
+%----------------------------------------------------------------------------------------
+
+\section{Prop\'osito}
+
+% Identificar algunos problemas actuales nacionales asociados a cada uno de los niveles jer\'arquicos de necesidades propuestos por Abraham Maslow \cite{mcleod2007maslow}.
+
+stoichiometry of the reaction (as defined in \ref{Subsec:Def}):
+
+\begin{center}\ce{2 Mg + O2 -> 2 MgO}\end{center}
+
+
+
+\subsection{Definiciones} \label{Subsec:Def}
+\begin{description}
+\item[Stoichiometry]
+The relationship between the relative quantities of substances taking part in a reaction or forming a compound, typically a ratio of whole integers.
+\item[Atomic mass]
+The mass of an atom of a chemical element expressed in atomic mass units. It is approximately equivalent to the number of protons and neutrons in the atom (the mass number) or to the average number allowing for the relative abundances of different isotopes. 
+\end{description} 
+ 
+%----------------------------------------------------------------------------------------
+%	Secci'on 2
+%----------------------------------------------------------------------------------------
+
+\section{Datos experimentales}
+
+Ejemplo de una inclusi\'on de un ambiente \textit{tabular}
+
+\begin{tabular}{ll}
+Mass of empty crucible & \SI{7.28}{\gram}\\
+Mass of crucible and magnesium before heating & \SI{8.59}{\gram}\\
+Mass of crucible and magnesium oxide after heating & \SI{9.46}{\gram}\\
+Balance used & \#4\\
+Magnesium from sample bottle & \#1
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	Secci'on 3
+%----------------------------------------------------------------------------------------
+
+\section{C\'alculo}
+
+Otro ejemplo \textit{tabular} con mas datos y unidades en sistema internacional (SI).
+
+\begin{tabular}{ll}
+Mass of magnesium metal & = \SI{8.59}{\gram} - \SI{7.28}{\gram}\\
+& = \SI{1.31}{\gram}\\
+Mass of magnesium oxide & = \SI{9.46}{\gram} - \SI{7.28}{\gram}\\
+& = \SI{2.18}{\gram}\\
+Mass of oxygen & = \SI{2.18}{\gram} - \SI{1.31}{\gram}\\
+& = \SI{0.87}{\gram}
+\end{tabular}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Secci'on 4
+%----------------------------------------------------------------------------------------
+
+\section{Resultados}
+
+Un ejemplo de una gr\'afica en formato .eps 
+
+\begin{figure}[h]
+\begin{center}
+% \includegraphics[width=0.65\textwidth]{x2_x2_hat.png} % Include the image placeholder.png
+\caption{Figure caption.}
+\end{center}
+\end{figure}
+
+% Se incluye una bibliograf\'ia \cite{Smith:2012qr}.
+
+\bigskip
+
+Un ejemplo de la inclusi\'on de programaci\'on en matlab
+
+\begin{lstlisting}
+clear all;
+close all;
+clc
+
+syms z n
+
+%%% Ejemplo de la Parte II. inciso 1)
+
+fprintf('Se muestra la transformada Z de la parte II inciso 1  ')
+
+f1=2^n;
+fz1=ztrans(f1)
+pretty(fz1)
+
+%%% Ejemplo de Parte II. inciso 2)
+
+fprintf('Se muestra la transformada Z de la parte II inciso 2 ')
+
+
+f2=(0.5)^n;
+fz2=ztrans(f2)
+pretty(fz2)
+\end{lstlisting}
+
+%----------------------------------------------------------------------------------------
+%	Secci'on 5
+%----------------------------------------------------------------------------------------
+
+\section{Conclusiones y discusi\'on}
+
+% The accepted value (periodic table) is \SI{24.3}{\gram\per\mole} \cite{Smith:2012qr}. The percentage discrepancy between the accepted value and the result obtained here is 1.3\%. Because only a single measurement was made, it is not possible to calculate an estimated standard deviation.
+
+The most obvious source of experimental uncertainty is the limited precision of the balance. Other potential sources of experimental uncertainty are: the reaction might not be complete; if not enough time was allowed for total oxidation, less than complete oxidation of the magnesium might have, in part, reacted with nitrogen in the air (incorrect reaction); the magnesium oxide might have absorbed water from the air, and thus weigh ``too much." Because the result obtained is close to the accepted value it is possible that some of these experimental uncertainties have fortuitously cancelled one another.
+
+
+%----------------------------------------------------------------------------------------
+%	Blibiografia
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{IEEEtran}
+
+\bibliography{sample}
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}

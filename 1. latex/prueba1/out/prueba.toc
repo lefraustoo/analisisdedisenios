@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
+\contentsline {section}{\numberline {2}Estudio de Viabilidad}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}1. Alcance del Sistema}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}2. Situación Actual}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}3. Definición de Requisitos del Sistema}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}4. Alternativas de Solución}{2}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}5. Valoración de Alternativas}{2}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}6. Selección de la Solución}{3}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Informe de Viabilidad}{4}{section.3}%
+\contentsline {section}{\numberline {4}Obtención y Análisis de Requerimientos}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}1. Descubrimiento de Requerimientos}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}2. Clasificación y Organización de Requerimientos}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}3. Ordenación de Prioridades y Negociación}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}4. Documentación de Requerimientos}{4}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Conclusión}{4}{section.5}%
