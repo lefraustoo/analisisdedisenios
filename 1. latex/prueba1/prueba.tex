@@ -2,6 +2,7 @@
 
 % Paquetes necesarios
 \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -10,8 +11,8 @@
 \usepackage{rerunfilecheck}
 \geometry{margin=1in}
 
-\title{Estudio de Viabilidad y Análisis de Requerimientos para el Sistema de Gestión de Maquinaria en Taller Mecánico Universitario}
-\author{lefraustoo}
+\title{\textbf{Estudio de Viabilidad y Análisis de Requerimientos para el Sistema de Gestión de Maquinaria en Taller Mecánico Universitario}}
+\author{Cortes Reyes Yarely Lizette  \\ Esquivel Velázquez Emmanuel \\ Frausto Orozco Leonardo Eldriel \\ Marcos Ruíz Emiliano \\ 1MM7}
 \date{\today}
 
 \begin{document}
@@ -28,31 +29,35 @@ Este documento presenta el estudio de viabilidad y el análisis de requerimiento
 \section{Estudio de Viabilidad}
 
 \subsection{1. Alcance del Sistema}
-Este sistema permitirá gestionar el uso de diversas máquinas en el taller, proporcionando un mecanismo de reserva, control de disponibilidad y mantenimiento. Además, facilitará la asignación de máquinas basadas en la prioridad de proyectos de los estudiantes.
+Este sistema permitirá gestionar el uso de diversas máquinas en el taller (fresadora, torno, máquinas cnc, estación de soldaura, simuladores y dobladora), proporcionando un mecanismo de reserva, control de disponibilidad y mantenimiento. Además, facilitará la asignación de máquinas basadas en la prioridad de proyectos de los estudiantes.
 
 \subsection{2. Situación Actual}
-En la situación actual, la reserva de máquinas es manual, lo que genera conflictos y tiempos muertos. La falta de un sistema de gestión reduce la eficiencia y la disponibilidad de las máquinas.
+En la situación actual, la reserva de máquinas es presencial, lo que genera conflictos y tiempos muertos entre los diferentes estudiantes que lo ocupan. La falta de un sistema de gestión reduce la eficiencia y la disponibilidad de las máquinas. Además, no se cuenta con un mecanismo para controlar el estado de las máquinas y su mantenimiento. De igual forma, algunas de las máquinas no están en funcionamiento lo cual reduce la capacidad del taller.
 
 \subsection{3. Definición de Requisitos del Sistema}
 \begin{itemize}
     \item Gestión de reservas para estudiantes.
     \item Control de estado de las máquinas (disponible, en uso, en mantenimiento).
-    \item Reporte de uso y estadísticas.
-    \item Asignación priorizada de máquinas.
+    \item Reporte de uso y estadísticas (tiempo de uso, máquinas más solicitadas, cuantas veces ha sido reparada).
+    \item Asignación priorizada de máquinas (alumnado general, trabajos terminales, visitantes).
 \end{itemize}
 
 \subsection{4. Alternativas de Solución}
 \begin{itemize}
-    \item Desarrollo de una aplicación de escritorio en C++.
+    \item \textbf{Desarrollo de un sistema de información desarrollado en lenguaje orientado a objetos.}
     \item Implementación de un sistema web.
     \item Uso de una aplicación móvil para reservas remotas.
+    \item Google forms para reservas.
+    \item Google calendar para control de disponibilidad.
 \end{itemize}
 
 \subsection{5. Valoración de Alternativas}
-Cada alternativa será evaluada en función de su facilidad de uso, tiempo de desarrollo y costo. La opción seleccionada deberá ser adaptable y capaz de cubrir las necesidades del taller.
+Cada alternativa será evaluada en función de su facilidad y tiempo de desarrollo, costo y facilidad de uso. La opción seleccionada deberá ser adaptable y capaz de cubrir las necesidades del taller.
 
 \subsection{6. Selección de la Solución}
-La solución seleccionada es el desarrollo de una aplicación de escritorio en C++, debido a su facilidad de integración en el taller y al cumplimiento de todos los requisitos funcionales.
+La solución seleccionada es el desarrollo de una aplicación en C++, debido a su flexibilidad, bajo costo y facilidad de implementación. Además, se ajusta a las necesidades del taller y permite una integración con el sistema de control de acceso existente. 
+
+
 
 \newpage
 \section{Informe de Viabilidad}
@@ -61,7 +66,7 @@ Se presenta un resumen de las etapas anteriores para justificar la viabilidad de
 % Análisis de Requerimientos
 \section{Obtención y Análisis de Requerimientos}
 
-\subsection{1. Descubrimiento de Requerimientos}
+\subsection{1. Requerimientos Identificados}
 Se han identificado los siguientes requerimientos, tanto funcionales como no funcionales:
 \begin{itemize}
     \item Requerimientos funcionales: reserva de máquinas, control de estados.
@@ -72,20 +77,19 @@ Se han identificado los siguientes requerimientos, tanto funcionales como no fun
 Los requerimientos se organizan en categorías:
 \begin{itemize}
     \item \textbf{Gestión de Reservas}: permite a los estudiantes reservar máquinas.
-    \item \textbf{Gestión de Mantenimiento}: permite bloquear máquinas para mantenimiento.
+    \item \textbf{Gestión de Mantenimiento}: permite bloquear las máquinas para mantenimiento programado o reparaciones (no colocarla en la interfaz de reservas).
+    \item \textbf{Reportes y Estadísticas}: permite generar reportes de uso y estadísticas de las máquinas (solo administradores).
+    \item \textbf{Asignación Priorizada}: permite asignar máquinas basadas en la prioridad de proyectos de los estudiantes.
 \end{itemize}
 
 \subsection{3. Ordenación de Prioridades y Negociación}
-La gestión de reservas y el control de estados son los requerimientos de mayor prioridad. Los reportes de uso y estadísticas son secundarios y podrán añadirse en versiones futuras.
+La gestión de reservas y el control de estados son los requerimientos de mayor prioridad. Los reportes de uso y estadísticas son secundarios y podrán añadirse en versiones futuras. La asignación priorizada es un requerimiento opcional y dependerá de la demanda de los usuarios.
 
 \subsection{4. Documentación de Requerimientos}
 \begin{itemize}
-    \item \textbf{Requerimiento 1}: El sistema debe permitir la reserva de máquinas.
+    \item \textbf{Requerimiento 1}: El sistema debe permitir la reserva de máquinas con al menos 24 horas de anticipación y un máximo de 2 horas por estudiante con un intervalo de 4 horas entre reservas.
     \item \textbf{Requerimiento 2}: El sistema debe permitir bloquear máquinas para mantenimiento programado.
+    \item \textbf{Requerimiento 3}: El sistema debe generar reportes de uso y estadísticas de las máquinas para los administradores.
 \end{itemize}
-
-% Conclusión
-\section{Conclusión}
-En conclusión, el estudio de viabilidad respalda el desarrollo de un sistema de gestión de maquinaria en C++ para el taller universitario. El análisis de requerimientos permite establecer una base sólida para el desarrollo del sistema y asegura que cumple con las necesidades del taller.
 
 \end{document}
